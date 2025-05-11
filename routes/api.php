@@ -7,6 +7,7 @@ use App\Http\Middleware\JWTMiddleware;
 use App\Http\Controllers\PBNServiceController;
 use App\Http\Controllers\ScanningController;
 
+
 // Маршруты, которые не требуют аутентификации
 Route::post('/register', [AuthController::class, 'register'])->name('register')
     ->withoutMiddleware([JWTMiddleware::class]);
